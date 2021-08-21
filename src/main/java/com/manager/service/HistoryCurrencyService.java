@@ -19,6 +19,7 @@ public class HistoryCurrencyService {
         if (!isExist){
             throw new NotFoundException("Mnemonic "+ mnemonic+ " not found.");
         }
+
         return null;
     }
 }
