@@ -18,4 +18,14 @@ public class HistoryCurrency {
     private Integer code;
     private Integer buy;
     private Integer sale;
+
+    public HistoryCurrency() {
+    }
+
+    public HistoryCurrency(LocalDate dateCreate, Integer code, Integer buy, Integer sale) {
+        this.dateCreate = dateCreate;
+        this.code = code;
+        this.buy = buy;
+        this.sale = sale;
+    }
 }

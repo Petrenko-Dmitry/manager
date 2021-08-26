@@ -19,9 +19,10 @@ public class JournalCurrencyLoader implements CommandLineRunner {
     public void run(String... args){
         Long count = journalCurrencyRepository.countAll();
         if (count < 1){
-            JournalCurrency journalUSD = new JournalCurrency("USD ", 840, " Доллар");
+            JournalCurrency journalUSD = new JournalCurrency("USD ", 980, " Доллар");
             JournalCurrency journalEUR = new JournalCurrency("EUR ", 978, " Евро");
-            journalCurrencyRepository.saveAll(Arrays.asList(journalUSD,journalEUR));
+            JournalCurrency journalUAH = new JournalCurrency("UAH ", 840, " Гривна");
+            journalCurrencyRepository.saveAll(Arrays.asList(journalUSD,journalEUR,journalUAH));
         }
     }
 }
