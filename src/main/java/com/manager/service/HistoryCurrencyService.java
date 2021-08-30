@@ -3,7 +3,6 @@ package com.manager.service;
 import com.manager.dao.HistoryCurrencyRepository;
 import com.manager.dao.JournalCurrencyRepository;
 import com.manager.dto.CurrencyDto;
-import com.manager.dto.HistoryCurrencyDto;
 import com.manager.entity.HistoryCurrency;
 import com.manager.exception.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,8 +22,10 @@ public class HistoryCurrencyService {
     @Autowired
     private GetCurrencyFromBank getCurrencyFromBank;
 
+    private HistoryCurrency historyCurrency;
 
-    public List<CurrencyDto> getCurrency(String mnemonic) throws IOException {
+
+    public Double getCurrency(String mnemonic) throws IOException {
         Integer code = getCode(mnemonic);
         boolean isExist = journalCurrencyRepository.existsByMnemonic(mnemonic);
         if (!isExist) {
@@ -37,12 +38,14 @@ public class HistoryCurrencyService {
                     .filter(f -> f.getCurrencyCodeA(840) == getCode("UAH") && f.getCurrencyCodeB(980) == getCode("USD"))
                     .filter(f -> f.getCurrencyCodeA(840) == getCode("UAH") && f.getCurrencyCodeB(978) == getCode("EUR"))
                     .collect(Collectors.toList());
-            List<HistoryCurrency> historyCurrencyList = currencyDtoList
-                    .stream()
-                    .map(m->)
+
+            CurrencyDto currencyDto = currencyDtoListSort.stream()
+                    .filter(f -> f.getCurrencyCodeA(getCode(mnemonic)) == getCode(mnemonic))
+                    .findFirst().get();
+            return currencyDto.getRateSell();
         }
 
-        return null;
+        return historyCurrency.getSale();
     }
 
     public Integer getCode(String mnemonic) {
