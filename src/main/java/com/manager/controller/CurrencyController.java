@@ -12,15 +12,20 @@ import java.io.IOException;
 import java.util.List;
 
 
-
 @RestController
 public class CurrencyController {
     @Autowired
     private HistoryCurrencyService historyCurrencyService;
 
     @GetMapping("/getCurrency")
-    public List<CurrencyDto> getCurrency(@RequestParam String mnemonic) throws IOException {
+    public Double getCurrency(@RequestParam String mnemonic) throws IOException {
         return historyCurrencyService.getCurrency(mnemonic);
+
+    }
+
+    @GetMapping("/getCodeCurrency")
+    public Integer getCodeCurrency(@RequestParam String mnemonic) {
+        return historyCurrencyService.getCode(mnemonic);
 
     }
 }

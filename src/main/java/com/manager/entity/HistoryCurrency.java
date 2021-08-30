@@ -16,16 +16,20 @@ public class HistoryCurrency {
     @CreationTimestamp
     private LocalDate dateCreate;
     private Integer code;
-    private Integer buy;
-    private Integer sale;
+    private Double buy;
+    private Double sale;
 
     public HistoryCurrency() {
     }
 
-    public HistoryCurrency(LocalDate dateCreate, Integer code, Integer buy, Integer sale) {
+    public HistoryCurrency(LocalDate dateCreate, Integer code, Double buy, Double sale) {
         this.dateCreate = dateCreate;
         this.code = code;
         this.buy = buy;
         this.sale = sale;
+    }
+
+    public Double getSale() {
+        return sale;
     }
 }
