@@ -16,13 +16,13 @@ public class JournalCurrencyLoader implements CommandLineRunner {
     private JournalCurrencyRepository journalCurrencyRepository;
 
     @Override
-    public void run(String... args){
+    public void run(String... args) {
         Long count = journalCurrencyRepository.countAll();
-        if (count < 1){
-            JournalCurrency journalUSD = new JournalCurrency("USD ", 980, " Доллар");
-            JournalCurrency journalEUR = new JournalCurrency("EUR ", 978, " Евро");
-            JournalCurrency journalUAH = new JournalCurrency("UAH ", 840, " Гривна");
-            journalCurrencyRepository.saveAll(Arrays.asList(journalUSD,journalEUR,journalUAH));
+        if (count < 1) {
+            JournalCurrency journalUSD = new JournalCurrency("USD", 840, " Доллар");
+            JournalCurrency journalEUR = new JournalCurrency("EUR", 978, " Евро");
+            JournalCurrency journalUAH = new JournalCurrency("UAH", 980, " Гривна");
+            journalCurrencyRepository.saveAll(Arrays.asList(journalUSD, journalEUR, journalUAH));
         }
     }
 }

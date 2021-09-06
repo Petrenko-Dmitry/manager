@@ -1,12 +1,15 @@
 package com.manager.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 
-import java.util.Date;
+import java.time.LocalDate;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
 @Data
 public class HistoryCurrencyDto {
-    private Date dateCreate;
+    private LocalDate dateCreate;
     private Integer code;
-    private Integer buy;
-    private Integer sale;
+    private Double buy;
+    private Double sale;
 }

@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
-import java.util.List;
 
 
 @RestController
@@ -18,7 +17,7 @@ public class CurrencyController {
     private HistoryCurrencyService historyCurrencyService;
 
     @GetMapping("/getCurrency")
-    public Double getCurrency(@RequestParam String mnemonic) throws IOException {
+    public HistoryCurrencyDto getCurrency(@RequestParam String mnemonic) throws IOException {
         return historyCurrencyService.getCurrency(mnemonic);
 
     }

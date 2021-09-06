@@ -2,6 +2,7 @@ package com.manager.entity;
 
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
+import org.springframework.data.annotation.CreatedDate;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -14,6 +15,7 @@ public class HistoryCurrency {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @CreationTimestamp
+    @Column(columnDefinition = "DATE")
     private LocalDate dateCreate;
     private Integer code;
     private Double buy;
