@@ -5,7 +5,6 @@ import com.manager.entity.HistoryCurrency;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
 
-import java.time.LocalDate;
 
 @Component
 public class CurrencyDtoToHistoryCurrency implements Converter<CurrencyDto, HistoryCurrency> {

@@ -19,8 +19,6 @@ import java.util.List;
 @Service
 public class HistoryCurrencyService {
     @Autowired
-    private JournalCurrencyRepository journalCurrencyRepository;
-    @Autowired
     private HistoryCurrencyRepository historyCurrencyRepository;
     @Autowired
     private GetCurrencyFromBank getCurrencyFromBank;
@@ -30,10 +28,12 @@ public class HistoryCurrencyService {
     private CurrencyDtoToHistoryCurrencyDto currencyDtoToHistoryCurrencyDto;
     @Autowired
     private CurrencyDtoToHistoryCurrency currencyDtoToHistoryCurrency;
+    @Autowired
+    private MnemonicService mnemonicService;
 
     public HistoryCurrencyDto getCurrency(String mnemonic) throws IOException {
         Integer code = getCode(mnemonic);
-        boolean isExist = journalCurrencyRepository.existsByMnemonic(mnemonic);
+        boolean isExist = mnemonicService.isExistMnemonic(mnemonic);
         if (!isExist) {
             throw new NotFoundException("Mnemonic " + mnemonic + " not found.");
         }
