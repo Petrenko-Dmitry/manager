@@ -1,0 +1,101 @@
+{"result":{
+"bankruptcy_court_name": "",
+"errtype": 0,
+"termination_doc_date": "",
+"termination_record_date": "",
+"source": "request",
+"termination_doc_number": "",
+"bankruptcy_date_judge": "",
+"termination_canc_number": "",
+"main_activity_code": "62.01",
+"activitykinds":[
+{
+"activity_code": "62.09",
+"activity_name": "Інша діяльність у сфері інформаційних технологій і комп'ютерних систем"
+},
+{
+"activity_code": "62.03",
+"activity_name": "Діяльність із керування комп'ютерним устаткованням"
+},
+{
+"activity_code": "62.02",
+"activity_name": "Консультування з питань інформатизації"
+},
+{
+"activity_code": "62.01",
+"activity_name": "Комп'ютерне програмування"
+}
+],
+"bankruptcy_doc_date": "",
+"termination_date_judge": "",
+"found": "1",
+"termination_record_number": "",
+"termination_object_name": "Департамент адміністративних послуг та дозвільних процедур Дніпровської міської ради",
+"bankruptcy_rec_date": "",
+"fop_fax":[
+""
+],
+"fop_email":[
+""
+],
+"is_fop": "Y",
+"fop_state": "1",
+"main_activity_recdate": "10000000450376",
+"open_enforcements":[
+],
+"fop_tel":[
+"qwe",
+"qwer",
+"qwert"
+],
+"risk_class": "2",
+"registrations":[
+{
+"registry_name": "ГОЛОВНЕ УПРАВЛІННЯ РЕГІОНАЛЬНОЇ СТАТИСТИКИ",
+"registry_code": "21680000",
+"registry_type": "4000.0",
+"registry_description": "",
+"registry_start_date": "2015-08-12",
+"registry_start_num": "",
+"registry_end_date": "",
+"registry_end_num": ""
+},
+{
+"registry_name": "ГОЛОВНЕ УПРАВЛІННЯ ДПС У ДНІПРОПЕТРОВСЬКІЙ ОБЛАСТІ, ЛІВОБЕРЕЖНЕ УПРАВЛІННЯ, АМУР-НИЖНЬОДНІПРОВСЬКА ДПІ (АМУР-НИЖНЬОДНІПРОВСЬКИЙ Р-Н  М.ДНІПРА)",
+"registry_code": "43145015",
+"registry_type": "4002.0",
+"registry_description": "Реєстр платників податків",
+"registry_start_date": "2015-08-11",
+"registry_start_num": "046115116304",
+"registry_end_date": "",
+"registry_end_num": ""
+},
+{
+"registry_name": "ГОЛОВНЕ УПРАВЛІННЯ ДПС У ДНІПРОПЕТРОВСЬКІЙ ОБЛАСТІ, ЛІВОБЕРЕЖНЕ УПРАВЛІННЯ, АМУР-НИЖНЬОДНІПРОВСЬКА ДПІ (АМУР-НИЖНЬОДНІПРОВСЬКИЙ Р-Н  М.ДНІПРА)",
+"registry_code": "43145015",
+"registry_type": "4001.0",
+"registry_description": "Реєстр платників єдиного внеску",
+"registry_start_date": "2015-08-11",
+"registry_start_num": "10000000450376",
+"registry_end_date": "",
+"registry_end_num": ""
+}
+],
+"termination_state": "",
+"bankruptcy_doc_num": "",
+"termination_cause": "",
+"reg_record_date": "2015-08-11",
+"pib_fop": "БРОДІ ДЖЕЙСОН АНДРІЙОВИЧ",
+"prev_registration_end_term": "",
+"termination_court_name": "",
+"main_activity_name": "Комп'ютерне програмування",
+"update_date": "2021-09-10",
+"reg_date": "2015-08-11",
+"fop_web_page":[
+""
+],
+"termination_date": "",
+"reg_record_number": "22240000000101412",
+"bankruptcy_rec_state": ""
+}
+}

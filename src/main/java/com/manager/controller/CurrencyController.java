@@ -1,7 +1,10 @@
 package com.manager.controller;
 
+import com.manager.dto.CurrencyDto;
 import com.manager.dto.HistoryCurrencyDto;
 import com.manager.dto.ExistCurrencyDto;
+import com.manager.service.ParseUbkiAnswerService;
+import com.manager.service.GetCurrencyFromBank;
 import com.manager.service.HistoryCurrencyService;
 import com.manager.service.MnemonicService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +21,10 @@ public class CurrencyController {
     private HistoryCurrencyService historyCurrencyService;
     @Autowired
     private MnemonicService mnemonicService;
+    @Autowired
+    private ParseUbkiAnswerService answerService;
+    @Autowired
+    private GetCurrencyFromBank getCurrencyFromBank;
 
     @GetMapping("/getCurrency")
     public HistoryCurrencyDto getCurrency(@RequestParam String mnemonic) throws IOException {
@@ -37,5 +44,11 @@ public class CurrencyController {
     @GetMapping("/getAll")
     public List<ExistCurrencyDto> getAll() {
         return mnemonicService.getAll();
+    }
+
+
+    @GetMapping("/getCurrencyFromBank")
+    public List<CurrencyDto> getCurrency() throws IOException{
+        return getCurrencyFromBank.getCurrency();
     }
 }

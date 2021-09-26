@@ -32,6 +32,7 @@ public class GetCurrencyFromBank {
             builder.append(field);
             builder.append('\r');
         }
+
         ObjectMapper objectMapper = new ObjectMapper();
         List<CurrencyDto> currencyDtoList = objectMapper.readValue(builder.toString(), new TypeReference<List<CurrencyDto>>() {
         });

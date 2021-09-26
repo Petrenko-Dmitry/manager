@@ -25,5 +25,16 @@ public class CurrencyDto {
     public Double getRateSell() {
         return rateSell;
     }
+
+    @Override
+    public String toString() {
+        return "CurrencyDto{" +
+                "currencyCodeA=" + currencyCodeA +
+                ", currencyCodeB=" + currencyCodeB +
+                ", date=" + date +
+                ", rateBuy=" + rateBuy +
+                ", rateSell=" + rateSell +
+                '}';
+    }
 }
 

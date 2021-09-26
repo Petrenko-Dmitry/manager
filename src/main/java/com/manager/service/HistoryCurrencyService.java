@@ -4,7 +4,6 @@ import com.manager.converter.CurrencyDtoToHistoryCurrency;
 import com.manager.converter.CurrencyDtoToHistoryCurrencyDto;
 import com.manager.converter.HistoryCurrencyToHistoryCurrencyDto;
 import com.manager.dao.HistoryCurrencyRepository;
-import com.manager.dao.JournalCurrencyRepository;
 import com.manager.dto.CurrencyDto;
 import com.manager.dto.HistoryCurrencyDto;
 import com.manager.entity.HistoryCurrency;
