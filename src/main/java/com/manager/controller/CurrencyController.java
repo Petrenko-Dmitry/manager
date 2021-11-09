@@ -3,7 +3,6 @@ package com.manager.controller;
 import com.manager.dto.CurrencyDto;
 import com.manager.dto.HistoryCurrencyDto;
 import com.manager.dto.ExistCurrencyDto;
-import com.manager.service.ParseUbkiAnswerService;
 import com.manager.service.GetCurrencyFromBank;
 import com.manager.service.HistoryCurrencyService;
 import com.manager.service.MnemonicService;
@@ -21,8 +20,6 @@ public class CurrencyController {
     private HistoryCurrencyService historyCurrencyService;
     @Autowired
     private MnemonicService mnemonicService;
-    @Autowired
-    private ParseUbkiAnswerService answerService;
     @Autowired
     private GetCurrencyFromBank getCurrencyFromBank;
 
@@ -48,7 +45,7 @@ public class CurrencyController {
 
 
     @GetMapping("/getCurrencyFromBank")
-    public List<CurrencyDto> getCurrency() throws IOException{
+    public List<CurrencyDto> getCurrency() throws IOException {
         return getCurrencyFromBank.getCurrency();
     }
 }

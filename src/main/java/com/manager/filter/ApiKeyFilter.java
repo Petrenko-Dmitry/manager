@@ -1,22 +1,15 @@
 package com.manager.filter;
 
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-
 import org.apache.http.HttpResponse;
-
 import org.apache.http.client.fluent.Request;
 import org.apache.http.entity.ContentType;
 import org.apache.http.util.EntityUtils;
-import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.*;
@@ -51,7 +44,7 @@ public class ApiKeyFilter implements Filter {
             return;
         }
         String apiKey = req.getHeader(API_KEY);
-        if(!checkApiKey(apiKey)){
+        if (!checkApiKey(apiKey)) {
             HttpServletResponse httpResponse = (HttpServletResponse) servletResponse;
             String errorMessage = String.format("ApiKey %s is not valid ", apiKey);
             httpResponse.sendError(HttpStatus.FORBIDDEN.value(), errorMessage);
@@ -66,8 +59,9 @@ public class ApiKeyFilter implements Filter {
                 .execute()
                 .returnResponse();
 
-       return Boolean.parseBoolean(EntityUtils.toString(response.getEntity(), "UTF-8"));
+        return Boolean.parseBoolean(EntityUtils.toString(response.getEntity(), "UTF-8"));
     }
+
     @Override
     public void destroy() {
     }

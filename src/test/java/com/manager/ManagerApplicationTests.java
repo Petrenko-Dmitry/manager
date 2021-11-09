@@ -7,16 +7,11 @@ import com.manager.dto.ResultDto;
 import org.apache.http.client.fluent.Request;
 import org.junit.jupiter.api.Test;
 
-
-import javax.sound.midi.Soundbank;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 
 
 class ManagerApplicationTests {
