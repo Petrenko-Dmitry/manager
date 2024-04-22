@@ -13,22 +13,24 @@ import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
 
+import static java.util.Objects.nonNull;
+
 
 @Service
 public class ParseUbkiAnswerService {
-    private ObjectMapper objectMapper = new ObjectMapper();
+    private final ObjectMapper objectMapper = new ObjectMapper();
 
     private String readFileUbki() throws IOException {
-        InputStream inputStream = getClass().getClassLoader().getResourceAsStream("ubki.txt");
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, StandardCharsets.UTF_8));
-        String currentLine = "";
+        var inputStream = getClass().getClassLoader().getResourceAsStream("ubki.txt");
+        var bufferedReader = new BufferedReader(new InputStreamReader(inputStream, StandardCharsets.UTF_8));
+        var currentLine = new StringBuilder();
         String line;
-        while ((line = bufferedReader.readLine()) != null) {
+        while (nonNull((line = bufferedReader.readLine()))) {
             if (!line.isEmpty()) {
-                currentLine += line;
+                currentLine.append(line);
             }
         }
-        return currentLine;
+        return currentLine.toString();
     }
 
     public UbkiAnswerDto getUserInfo() throws IOException {

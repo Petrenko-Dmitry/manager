@@ -16,11 +16,11 @@ public class UserPhoneController {
     private ParseUbkiAnswerService parseUbkiAnswerService;
 
 
-    /* Имитация стороннего сервиса для расшифровки телефонов
-
+    /*
+    Имитация стороннего сервиса для расшифровки телефонов
      */
     @GetMapping("/encrypt")
-    public String encrypt(@RequestParam String uid) throws IOException {
+    public String encrypt(@RequestParam String uid) {
         String phone = null;
         switch (uid) {
             case "qwe":
